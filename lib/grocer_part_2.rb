@@ -51,5 +51,5 @@ def checkout(cart, coupons)
   cart.each |grocery|
     total += grocery[:price]
   end
-
+  if total > 
 end
