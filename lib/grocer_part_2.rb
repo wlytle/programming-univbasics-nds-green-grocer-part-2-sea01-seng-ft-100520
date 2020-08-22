@@ -53,7 +53,7 @@ def checkout(cart, coupons)
   binding.pry
   
   cart.each do |grocery|
-    total += grocery[:price]
+    total += grocery[:price] * grocery[:count]
   end
   
   if total > 100
