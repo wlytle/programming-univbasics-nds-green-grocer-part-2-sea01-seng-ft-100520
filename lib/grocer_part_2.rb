@@ -7,7 +7,6 @@ def apply_coupons(cart, coupons)
       if grocery[:item] === coupon[:item]
         
         #make cupon price per item
-  
           new_cost = coupon[:cost]/coupon[:num]
         
         #Set up new discounted item for cart
