@@ -16,9 +16,9 @@ def apply_coupons(cart, coupons)
         coupon_item[:clearance] = grocery[:clearance]
         
         if coupon[:num] >= grocery[:count]
-          coupon_item[:count] = grocery[:count]
-          grocery[:count] = 0
-        else
+        #   coupon_item[:count] = grocery[:count]
+        #   grocery[:count] = 0
+        # else
           coupon_item[:count] = coupon[:num]
           grocery[:count] = grocery[:count] - coupon_item[:count]
         end
