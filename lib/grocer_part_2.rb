@@ -49,7 +49,7 @@ def checkout(cart, coupons)
   cart = apply_clearance(cart)
   
   cart.each |grocery|
-  
+    total += grocery[:price]
   end
 
 end
