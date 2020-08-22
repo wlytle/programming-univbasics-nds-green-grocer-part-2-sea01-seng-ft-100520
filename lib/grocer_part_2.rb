@@ -4,7 +4,7 @@ require 'pry'
 def apply_coupons(cart, coupons)
   coupons.each do |coupon|
     cart.each do |grocery|
-      if grocery[:item] === coupon[:item]
+      if grocery[:item] === coupon[:item] && grocer[:count] >= coupon[:num]
         
         #make cupon price per item
           new_cost = coupon[:cost]/coupon[:num]
