@@ -33,20 +33,23 @@ def apply_coupons(cart, coupons)
 end
 
 def apply_clearance(cart)
-  cart.each do |item|
-    if item[:clearance]
-      item[:price] *= 0.8
-      item[:price].round(2)
+  cart.each do |grocery|
+    if grocery[:clearance]
+      grocery[:price] *= 0.8
+      grocery[:price].round(2)
     end
   end
   cart
 end
 
 def checkout(cart, coupons)
+  total = 0
   cart = consolidate_cart(cart)
   cart = apply_coupons(cart, coupons)
   cart = apply_clearance(cart)
   
+  cart.each |grocery|
   
+  end
 
 end
