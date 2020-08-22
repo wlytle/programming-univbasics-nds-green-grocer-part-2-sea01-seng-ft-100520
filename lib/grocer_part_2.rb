@@ -51,5 +51,8 @@ def checkout(cart, coupons)
   cart.each |grocery|
     total += grocery[:price]
   end
-  if total > 
+  if total > 100
+    total *= 0.9
+  end
+  total.round(2)
 end
