@@ -44,9 +44,13 @@ end
 
 def checkout(cart, coupons)
   total = 0
+  binding.pry
   cart = consolidate_cart(cart)
+  binding.pry
   cart = apply_coupons(cart, coupons)
+  binding.pry
   cart = apply_clearance(cart)
+  binding.pry
   
   cart.each do |grocery|
     total += grocery[:price]
@@ -55,6 +59,6 @@ def checkout(cart, coupons)
   if total > 100
     total *= 0.9
   end
-  
+  binding.pry
   total.round(2)
 end
