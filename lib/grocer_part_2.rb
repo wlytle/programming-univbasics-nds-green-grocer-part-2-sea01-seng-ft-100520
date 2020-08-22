@@ -2,7 +2,6 @@ require_relative './part_1_solution.rb'
 require 'pry'
 
 def apply_coupons(cart, coupons)
-  coupon_item = {}
   coupons.each do |coupon|
     cart.each do |grocery|
       if grocery[:item] === coupon[:item]
